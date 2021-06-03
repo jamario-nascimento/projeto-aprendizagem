@@ -17,3 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('clientes', 'ClienteCrontroller');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
